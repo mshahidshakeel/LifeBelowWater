@@ -6,40 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/svSpecies"
-        android:layout_width="0sp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8sp"
-        app:iconifiedByDefault="false"
-        app:layout_constraintBottom_toTopOf="@id/rvSpecies"
-        app:layout_constraintEnd_toStartOf="@id/ibSort"
-        app:layout_constraintStart_toStartOf="parent"
+    <FrameLayout
+        android:id="@+id/fragments_container"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Search Species"
-        app:searchIcon="@null" />
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
 
-    <ImageButton
-        android:id="@+id/ibSort"
-        style="@style/Widget.AppCompat.ButtonBar.AlertDialog"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
-        android:layout_marginEnd="8sp"
-        android:layout_marginRight="8sp"
-        android:src="@drawable/ic_baseline_sort_24"
-        app:layout_constraintBottom_toBottomOf="@id/svSpecies"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/svSpecies"
-        tools:ignore="ContentDescription" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSpecies"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
-        android:layout_margin="8sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/svSpecies" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
