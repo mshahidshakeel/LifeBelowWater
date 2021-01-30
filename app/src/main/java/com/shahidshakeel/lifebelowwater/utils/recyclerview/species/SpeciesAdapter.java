@@ -19,13 +19,14 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesViewHolder> {
   private final ArrayList<Specie> species;
   private final ArrayList<Specie> filteredSpecies;
   private boolean sorted;
+  private OnSpecieClickListener onSpecieClickListener;
 
   public SpeciesAdapter(ArrayList<Specie> species) {
     Collections.sort(species);
     sorted = true;
 
-    this.species = species;
-    this.filteredSpecies = new ArrayList<>(this.species);
+    this.filteredSpecies = species;
+    this.species = new ArrayList<>(this.filteredSpecies);
   }
 
   @NonNull
@@ -33,7 +34,7 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesViewHolder> {
   public SpeciesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     LayoutInflater inflater = LayoutInflater.from(parent.getContext());
     View view = inflater.inflate(R.layout.view_holder_species, parent, false);
-    return new SpeciesViewHolder(view);
+    return new SpeciesViewHolder(view, onSpecieClickListener);
   }
 
   @Override
@@ -94,5 +95,9 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesViewHolder> {
       sorted = true;
     }
     notifyDataSetChanged();
+  }
+
+  public void setOnSpecieClickListener(OnSpecieClickListener onSpecieClickListener){
+    this.onSpecieClickListener = onSpecieClickListener;
   }
 }

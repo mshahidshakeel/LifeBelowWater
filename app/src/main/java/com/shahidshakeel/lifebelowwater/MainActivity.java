@@ -1,18 +1,23 @@
 package com.shahidshakeel.lifebelowwater;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.shahidshakeel.lifebelowwater.model.Specie;
+import com.shahidshakeel.lifebelowwater.utils.recyclerview.species.OnSpecieClickListener;
 import com.shahidshakeel.lifebelowwater.utils.recyclerview.species.SpeciesAdapter;
 
 import java.lang.reflect.Array;
@@ -20,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnSpecieClickListener {
   private final ArrayList<Specie> species = new ArrayList<>();
 
   @Override
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     rvSpecies.setAdapter(speciesAdapter);
     rvSpecies.setLayoutManager(new LinearLayoutManager(this));
     rvSpecies.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+    speciesAdapter.setOnSpecieClickListener(this);
 
     svSpecies.setOnQueryTextListener(
       new SearchView.OnQueryTextListener() {
@@ -78,8 +84,11 @@ public class MainActivity extends AppCompatActivity {
     schizopygeLocations.add("KPK");
     species.add(new Specie("Schizopyge esocinus", "N/D", schizopygeLocations, 32714));
 
+  }
 
-
-
+  @SuppressLint("DefaultLocale")
+  @Override
+  public void onSpecieClick(int position) {
+    Toast.makeText(this, String.format("position: %d, size: %d", position, species.size()), Toast.LENGTH_SHORT).show();
   }
 }
