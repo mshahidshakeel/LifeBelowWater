@@ -42,5 +42,7 @@ public class SpeciesViewHolder extends RecyclerView.ViewHolder {
     tvPopulation.setText(NumberFormat.getNumberInstance().format(population));
     if (population < 50000)
       tvPopulation.setTextColor(Color.RED);
+    else
+      tvPopulation.setTextColor(Color.BLACK);
   }
 }
