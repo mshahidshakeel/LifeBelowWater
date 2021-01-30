@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.shahidshakeel.lifebelowwater.fragments.SpeciesFragment;
 import com.shahidshakeel.lifebelowwater.fragments.WaterBodiesFragment;
 import com.shahidshakeel.lifebelowwater.model.Specie;
@@ -25,7 +27,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    showFragment(new SpeciesFragment(null));
+    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+//    ref.push().setValue()
+
+
+    getSupportFragmentManager()
+      .beginTransaction()
+      .add(R.id.fragments_container, new SpeciesFragment())
+      .commit();
 
     BottomNavigationView bnv = findViewById(R.id.bottom_navigation);
     bnv.setOnNavigationItemSelectedListener(this);
@@ -42,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     if (item.getItemId() == R.id.menu_species){
-      showFragment(new SpeciesFragment(null));
+      showFragment(new SpeciesFragment());
       return true;
     }
 

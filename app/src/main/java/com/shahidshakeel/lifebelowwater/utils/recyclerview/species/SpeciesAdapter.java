@@ -16,7 +16,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesViewHolder> {
-  private final ArrayList<Specie> species;
+  private ArrayList<Specie> species;
   private final ArrayList<Specie> filteredSpecies;
   private boolean sorted;
   private OnSpecieClickListener onSpecieClickListener;
@@ -99,5 +99,10 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesViewHolder> {
 
   public void setOnSpecieClickListener(OnSpecieClickListener onSpecieClickListener){
     this.onSpecieClickListener = onSpecieClickListener;
+  }
+
+  public void update() {
+    sorted = true;
+    this.species = new ArrayList<>(this.filteredSpecies);
   }
 }

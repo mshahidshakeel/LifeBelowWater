@@ -2,7 +2,6 @@ package com.shahidshakeel.lifebelowwater.utils.recyclerview.species;
 
 import android.graphics.Color;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.shahidshakeel.lifebelowwater.R;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
+import java.util.List;
 
 public class SpeciesViewHolder extends RecyclerView.ViewHolder {
   private final TextView tvSpecieName, tvLocations, tvPopulation;
@@ -37,7 +36,7 @@ public class SpeciesViewHolder extends RecyclerView.ViewHolder {
     this.tvSpecieName.setText(specieName);
   }
 
-  public void setSpecieLocations(ArrayList<String> locations) {
+  public void setSpecieLocations(List<String> locations) {
     StringBuilder locationsStringBuilder = new StringBuilder();
     for (int i = 0; i < locations.size(); ++i) {
       locationsStringBuilder.append(locations.get(i));

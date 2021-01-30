@@ -8,18 +8,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.shahidshakeel.lifebelowwater.R;
 import com.shahidshakeel.lifebelowwater.model.Specie;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
+import java.util.List;
 
 public class SpecieProfileDialog extends AlertDialog {
   private final Specie specie;
   public SpecieProfileDialog(Context context, Specie specie) {
     super(context);
     this.specie = specie;
+    Toast.makeText(context, specie.getKey(), Toast.LENGTH_SHORT).show();
   }
 
   @Override
@@ -37,7 +39,7 @@ public class SpecieProfileDialog extends AlertDialog {
     tvSpeciePopulation.setText(NumberFormat.getInstance().format(specie.getPopulation()));
 
     StringBuilder specieLocationsBuilder = new StringBuilder();
-    ArrayList<String> specieLocations = specie.getLocations();
+    List<String> specieLocations = specie.getLocations();
     for (int i = 0; i < specieLocations.size(); ++i) {
       specieLocationsBuilder.append(specieLocations.get(i));
       if (i != specieLocations.size() - 1)

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "110029354222",
+    "firebase_url": "https://lifebelowwater-19c9b-default-rtdb.firebaseio.com",
+    "project_id": "lifebelowwater-19c9b",
+    "storage_bucket": "lifebelowwater-19c9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110029354222:android:74ccc5d1d2bf09e43bafff",
+        "android_client_info": {
+          "package_name": "com.shahidshakeel.lifebelowwater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110029354222-684f9o4ot0cldfffgp44pckirdpbrv1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKUvgkzUY_EseLJzCnTBpBkeOU1jwvSmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110029354222-684f9o4ot0cldfffgp44pckirdpbrv1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

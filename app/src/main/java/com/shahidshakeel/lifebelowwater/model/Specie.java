@@ -1,17 +1,26 @@
 package com.shahidshakeel.lifebelowwater.model;
 
+import com.google.firebase.database.Exclude;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Specie implements Comparable<Specie> {
   private String name, description;
-  private ArrayList<String> locations;
+  private List<String> locations;
   private long population;
+  private String key;
 
-  public Specie(String name, String description, ArrayList<String> locations, long population) {
+  public Specie() {}
+
+  public Specie(String name, String description, List<String> locations, long population, String key) {
     this.name = name;
     this.description = description;
     this.locations = locations;
     this.population = population;
+    this.key = key;
   }
 
   public String getName() {
@@ -30,7 +39,7 @@ public class Specie implements Comparable<Specie> {
     this.description = description;
   }
 
-  public ArrayList<String> getLocations() {
+  public List<String> getLocations() {
     return locations;
   }
 
@@ -49,5 +58,25 @@ public class Specie implements Comparable<Specie> {
   @Override
   public int compareTo(Specie o) {
     return (int) (this.population - o.getPopulation());
+  }
+
+  public void setKey(String key) {
+    this.key = key;
+  }
+
+  public String getKey() {
+    return this.key;
+  }
+
+  @Exclude
+  public Map<String, Object> toMap() {
+    HashMap<String, Object> result = new HashMap<>();
+    result.put("key", key);
+    result.put("name", name);
+    result.put("description", description);
+    result.put("population", population);
+    result.put("locations", locations);
+
+    return result;
   }
 }
