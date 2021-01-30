@@ -6,13 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSpecies"
+        android:layout_width="0sp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="8sp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@id/rvSpecies"
+        app:layout_constraintEnd_toStartOf="@id/ibSort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Search Species"
+        app:searchIcon="@null" />
 
+    <ImageButton
+        android:id="@+id/ibSort"
+        style="@style/Widget.AppCompat.ButtonBar.AlertDialog"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginRight="8sp"
+        android:src="@drawable/ic_baseline_sort_24"
+        app:layout_constraintBottom_toBottomOf="@id/svSpecies"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/svSpecies"
+        tools:ignore="ContentDescription" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpecies"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_margin="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svSpecies" />
 </androidx.constraintlayout.widget.ConstraintLayout>
