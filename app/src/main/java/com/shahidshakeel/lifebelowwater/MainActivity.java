@@ -27,10 +27,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-//    ref.push().setValue()
-
-
     getSupportFragmentManager()
       .beginTransaction()
       .add(R.id.fragments_container, new SpeciesFragment())
@@ -38,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     BottomNavigationView bnv = findViewById(R.id.bottom_navigation);
     bnv.setOnNavigationItemSelectedListener(this);
-
   }
 
   private void showFragment(Fragment fragment) {
@@ -50,12 +45,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-    if (item.getItemId() == R.id.menu_species){
+    if (item.getItemId() == R.id.menu_species) {
       showFragment(new SpeciesFragment());
       return true;
     }
 
-    if (item.getItemId() == R.id.menu_water_bodies){
+    if (item.getItemId() == R.id.menu_water_bodies) {
       showFragment(new WaterBodiesFragment());
       return true;
     }
