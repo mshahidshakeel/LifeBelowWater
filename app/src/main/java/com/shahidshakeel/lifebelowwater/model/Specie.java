@@ -2,7 +2,7 @@ package com.shahidshakeel.lifebelowwater.model;
 
 import java.util.ArrayList;
 
-public class Specie implements Comparable<Specie>{
+public class Specie implements Comparable<Specie> {
   private String name, description;
   private ArrayList<String> locations;
   private long population;
