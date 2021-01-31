@@ -11,18 +11,24 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.shahidshakeel.lifebelowwater.R;
 import com.shahidshakeel.lifebelowwater.model.Specie;
+import com.shahidshakeel.lifebelowwater.utils.EditProfileListener;
 
 import java.text.NumberFormat;
 import java.util.List;
 
 public class SpecieProfileDialog extends AlertDialog {
   private final Specie specie;
+  private String username;
+  private EditProfileListener listener;
 
-  public SpecieProfileDialog(Context context, Specie specie) {
+  public SpecieProfileDialog(Context context, Specie specie, String username, EditProfileListener listener) {
     super(context);
     this.specie = specie;
+    this.username = username;
+    this.listener = listener;
   }
 
   @SuppressLint("SetTextI18n")
@@ -37,6 +43,8 @@ public class SpecieProfileDialog extends AlertDialog {
     TextView tvSpecieLocations = view.findViewById(R.id.tvSpecieLocations);
     TextView tvSpecieDescription = view.findViewById(R.id.tvSpecieDescription);
     TextView tvEndangeredSpecie = view.findViewById(R.id.tvEndangeredSpecie);
+    FloatingActionButton fabEdit = view.findViewById(R.id.fabEdit);
+    View helperView = view.findViewById(R.id.helper);
 
     tvSpecieName.setText(specie.getName());
     tvSpeciePopulation.setText("Population of " + NumberFormat.getInstance().format(specie.getPopulation()));
@@ -57,6 +65,21 @@ public class SpecieProfileDialog extends AlertDialog {
       tvEndangeredSpecie.setVisibility(View.VISIBLE);
     else
       tvEndangeredSpecie.setVisibility(View.GONE);
+
+    if (username == null) {
+      fabEdit.setVisibility(View.GONE);
+      helperView.setVisibility(View.GONE);
+    } else {
+      fabEdit.setVisibility(View.VISIBLE);
+      helperView.setVisibility(View.VISIBLE);
+    }
+
+    fabEdit.setOnClickListener(
+      v -> {
+        this.dismiss();
+        listener.onProfileEdit(specie);
+      }
+    );
 
     super.onCreate(savedInstanceState);
   }

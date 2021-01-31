@@ -29,6 +29,7 @@ import com.shahidshakeel.lifebelowwater.dialogs.SpecieFormDialog;
 import com.shahidshakeel.lifebelowwater.dialogs.SpecieProfileDialog;
 import com.shahidshakeel.lifebelowwater.model.Specie;
 import com.shahidshakeel.lifebelowwater.utils.AddSpecieListener;
+import com.shahidshakeel.lifebelowwater.utils.EditProfileListener;
 import com.shahidshakeel.lifebelowwater.utils.recyclerview.species.OnSpecieClickListener;
 import com.shahidshakeel.lifebelowwater.utils.recyclerview.species.SpeciesAdapter;
 
@@ -36,13 +37,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class SpeciesFragment extends Fragment implements OnSpecieClickListener {
+public class SpeciesFragment extends Fragment implements OnSpecieClickListener, EditProfileListener {
   private final ArrayList<Specie> species = new ArrayList<>();
   private final DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+  private final String username;
+
+  public SpeciesFragment(String username) {
+    this.username = username;
+  }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+
     View v = inflater.inflate(R.layout.fragment_species, container, false);
 
     RecyclerView rvSpecies = v.findViewById(R.id.rvSpecies);
@@ -103,8 +110,11 @@ public class SpeciesFragment extends Fragment implements OnSpecieClickListener {
     );
 
     fabAddSpecie.setOnClickListener(
-      view -> new SpecieFormDialog(getContext(), null).show()
+      view -> new SpecieFormDialog(getContext(), null, false).show()
     );
+
+    if (username == null)
+      fabAddSpecie.setVisibility(View.INVISIBLE);
 
     return v;
   }
@@ -112,6 +122,11 @@ public class SpeciesFragment extends Fragment implements OnSpecieClickListener {
   @SuppressLint("DefaultLocale")
   @Override
   public void onSpecieClick(int position) {
-    new SpecieProfileDialog(getContext(), species.get(position)).show();
+    new SpecieProfileDialog(getContext(), species.get(position), username, this).show();
+  }
+
+  @Override
+  public void onProfileEdit(Specie specie) {
+    new SpecieFormDialog(getContext(), specie, false).show();
   }
 }

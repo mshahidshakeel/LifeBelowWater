@@ -3,9 +3,16 @@
     <item
         android:id="@+id/menu_species"
         android:enabled="true"
-        android:title="Species"/>
+        android:title="Species"
+        android:icon="@drawable/ic_species_24"/>
 
     <item
         android:id="@+id/menu_water_bodies"
-        android:title="Water Bodies"/>
+        android:title="Water Bodies"
+        android:icon="@drawable/ic_species_24"/>
+
+    <item
+        android:id="@+id/menu_preferences"
+        android:title="Preferences"
+        android:icon="@drawable/ic_species_24"/>
 </menu>

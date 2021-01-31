@@ -1,52 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/dialog_bg">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/tvSpecieName"
+    <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8sp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:background="@drawable/profile_name_bg"
-        android:fontFamily="@font/roboto_condensed_bold"/>
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tvEndangeredSpecie"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvSpecieName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_name_bg"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:padding="8sp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEndangeredSpecie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80fa0000"
+            android:gravity="center"
+            android:padding="8sp"
+            android:text="Endangered Specie"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSpeciePopulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e8"
+            android:padding="8sp" />
+
+        <TextView
+            android:id="@+id/tvSpecieLocations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f0f0f0"
+            android:padding="8sp" />
+
+        <TextView
+            android:id="@+id/tvSpecieDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_description_bg"
+            android:padding="8sp"/>
+
+        <View
+            android:id="@+id/helper"
+            android:layout_width="match_parent"
+            android:layout_height="24sp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEdit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8sp"
-        android:text="Endangered Specie"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:background="#80fa0000"/>
-
-    <TextView
-        android:id="@+id/tvSpeciePopulation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8sp"
-        android:background="#e8e8e8"/>
-
-    <TextView
-        android:id="@+id/tvSpecieLocations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8sp"
-        android:background="#f0f0f0"/>
-
-    <TextView
-        android:id="@+id/tvSpecieDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8sp"
-        android:background="@drawable/profile_description_bg"/>
-
-</LinearLayout>
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintTop_toBottomOf="@id/ll"
+        app:layout_constraintBottom_toBottomOf="@id/ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>
