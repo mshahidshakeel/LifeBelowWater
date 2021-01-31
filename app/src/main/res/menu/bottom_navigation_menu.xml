@@ -9,10 +9,10 @@
     <item
         android:id="@+id/menu_water_bodies"
         android:title="Water Bodies"
-        android:icon="@drawable/ic_species_24"/>
+        android:icon="@drawable/ic_baseline_space_bar_24"/>
 
     <item
         android:id="@+id/menu_preferences"
         android:title="Preferences"
-        android:icon="@drawable/ic_species_24"/>
+        android:icon="@drawable/ic_baseline_settings_24"/>
 </menu>

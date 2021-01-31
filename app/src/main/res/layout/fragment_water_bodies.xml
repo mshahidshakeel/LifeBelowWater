@@ -20,12 +20,642 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="8sp"/>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0sp"
-        android:layout_margin="8sp"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0sp"
+       android:layout_margin="8sp"
+       app:layout_constraintTop_toBottomOf="@id/title"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Pollution Index"
+               android:gravity="center"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sea"
+               android:textSize="36sp"
+               android:textStyle="bold"
+               android:fontFamily="sans-serif-condensed"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Sindh"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Arabian Sea"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="10"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="River"
+               android:textSize="36sp"
+               android:textStyle="bold"
+               android:fontFamily="sans-serif-condensed"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Punjab"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Ravi"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="22"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Jhelum"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="12"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Sutlej"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="15"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Chenab"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="34"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="KPK"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Kabul"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="10"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Sindh"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Indus"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="35"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Lake"
+               android:textSize="36sp"
+               android:textStyle="bold"
+               android:fontFamily="sans-serif-condensed"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Gilgit Baltistan"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Saif-ul-Malook"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="5"
+                       android:textSize="18sp"
+                       android:textStyle="bold"
+                       android:paddingEnd="20sp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Upper Kachura Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="8"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Lalusar Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="6"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Satpara Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="10"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Punjab"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Rawal"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="21"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Banjosa Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="19"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Swaik Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="12"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Nila Sand"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="9"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Khushab Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="29"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="20sp"
+               android:paddingLeft="20sp"
+               tools:ignore="RtlSymmetry"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Sindh"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Keenjhar"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="34"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Balochistan"
+                   android:fontFamily="sans-serif-condensed"
+                   android:textSize="24sp"
+                   android:textStyle="bold"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="40sp"
+                   android:layout_marginLeft="40sp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="start"
+                       android:text="Hanna Lake"
+                       android:fontFamily="sans-serif-condensed"
+                       android:textSize="18sp"
+                       android:textStyle="bold"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-condensed"
+                       android:gravity="end"
+                       android:paddingRight="20sp"
+                       android:text="13"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+   </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

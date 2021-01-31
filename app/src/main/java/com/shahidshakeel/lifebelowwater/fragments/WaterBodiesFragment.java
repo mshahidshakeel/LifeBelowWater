@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import com.google.android.material.textfield.TextInputEditText;
 import com.shahidshakeel.lifebelowwater.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class WaterBodiesFragment extends Fragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -20,4 +23,5 @@ public class WaterBodiesFragment extends Fragment {
 //    TextInputEditText tietLocations = view.findViewById(R.id.tietSpecieLocations);
     return view;
   }
+
 }
